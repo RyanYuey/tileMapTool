@@ -57,7 +57,8 @@ let download = (url, z,x,y)=>{
         // }).pipe(fs.createWriteStream(filePath1+ "/"+ `${y}.jpg`));
         request({uri:url,encoding: 'binary'},function (err,res,body) {
             if (!err && res.statusCode == 200) {
-                fs.writeFile(filePath1+ "/"+ `${y}.jpg`, body, 'binary',function (err) {
+                // 在这里可以修改下载图片格式
+                fs.writeFile(filePath1+ "/"+ `${y}.png`, body, 'binary',function (err) {
                     finished ++;
                     console.log(`下载：${finished}/${total}`);
                     if (err) {console.log(err);}
