@@ -9,3 +9,8 @@
 
 - 获取地图行政区边界经纬度 http://map.codezd.com/
 - 下载的图片改成默认png的，可以在downloadImg.js文件中修改
+
+## 运行
+
+- npm i
+- npm run download
